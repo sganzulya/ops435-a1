@@ -1,0 +1,33 @@
+main function:
+Checks if arguments are set up correctly & if true starts the DBDA function to figure out whats the next function to call, otherwise prints a usage statement to retry.
+
+dbda:
+Takes in the arguments, the date, steps & the --step command
+Checks to see if the steps are positive or negative  OR if there are two dates & calls the appropriate function before or after or get difference. Makes sure theres a valid amount of arguments & that they;re all correct. if not, prints invalid steps entered or the correct usage statement if arguments are invalid
+
+
+get difference:
+takes in two dates & splits them to year1 month1 & day1, and 2 for the second date, then it reorganizes it so the smaller date is first so it can output the correct positive number of days, and starts a loop untill the dates equal the same date while recording how many days into a count variable 
+returns the count variable
+
+after:
+Takes in the date(today) and splits it based on / into year, month & day variables, then based on the number of days you wanted it to count, does a loop till it reaches the step/day counter you've given it. also contains an if --steps = true statement to output every iteration of the loop so you can see the dates it has counted.
+returns date for each iteration or just the final date
+
+before:
+Same thing as after except it does it -1 untill days/steps is completed. also contains the step statement to output every iteration of the loop
+returns date for each iteration or just the final date
+
+usage:
+contains the usage statement if arguments are invalid
+
+days in month:
+contains a set that has the months & the maximum amount of days it can have while calling the leapyear function to calculate feburary's max if its a leapyear
+
+valid date:
+checks the date you've entered to make sure its valid and month isnt more than 12 or less than 1 & days isnt more than whats in the days in month function
+returns true/false & outputs string for correction of arguments
+
+leap year: 
+calculates the feburary max if the year is divisable by 4 years = leap year. 
+returns true or false
